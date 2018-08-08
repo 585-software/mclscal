@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  foreign_id: 1
+  title: MyString
+  description: MyText
+  start_at: 2018-08-08 19:35:09
+  end_at: 2018-08-08 19:35:09
+  url: MyString
+  campus: one
+
+two:
+  foreign_id: 1
+  title: MyString
+  description: MyText
+  start_at: 2018-08-08 19:35:09
+  end_at: 2018-08-08 19:35:09
+  url: MyString
+  campus: two
