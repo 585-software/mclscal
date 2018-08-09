@@ -6,14 +6,19 @@ class JsonToEvents
     @json = json
   end
 
+  # * means capture all arguments and keep them in an array called "args"
   def self.call(*args)
+    # This calls initialize, converting the args array back into arguments
     self.new(*args).call
   end
 
   # Run logic here
   def call
     parsed_json["results"].each do |event_hash|
+      # Find a Campus that matches the name, or create one
       campus = Campus.where(name: event_hash["campus"]).first_or_create!
+
+      # Create an event
       Event.create!(
         campus: campus,
         title: event_hash["title"],
