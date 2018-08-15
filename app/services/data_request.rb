@@ -1,3 +1,5 @@
+require 'net/http'
+
 class DataRequest
   attr_reader :data
 
@@ -30,9 +32,13 @@ class DataRequest
     #   )
     #end
 
-    puts parsed_data["total_results"]
+    url = URI.parse('http://calendar.libraryweb.org/ajax/calendar/list?c=-1&perpage=100&page=1&date=0000-00-00')
+    req = Net::HTTP::Get.new(url.to_s)
+    res = Net::HTTP.start(url.host, url.port) {|http|
+    http.request(req)}
+    # puts res.body
 
-    # JsonToEvents.call(data)
+    JsonToEvents.call(res.body)
   end
 
   private

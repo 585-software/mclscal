@@ -5,12 +5,13 @@ class DataRequestTest < ActiveSupport::TestCase
   setup do
     # @raw_json = File.open(Rails.root.join("test/fixtures/files/request.json")).read
     # @data = JSON.parse("http://calendar.libraryweb.org/ajax/calendar/list?c=-1&perpage=100&page=1&date=0000-00-00")
-    url = URI.parse('http://calendar.libraryweb.org/ajax/calendar/list?c=-1&perpage=100&page=1&date=0000-00-00')
-    req = Net::HTTP::Get.new(url.to_s)
-    res = Net::HTTP.start(url.host, url.port) {|http|
-    http.request(req)}
-    @data = res.body
-    puts @data
+    # url = URI.parse('http://calendar.libraryweb.org/ajax/calendar/list?c=-1&perpage=100&page=1&date=0000-00-00')
+    # req = Net::HTTP::Get.new(url.to_s)
+    # res = Net::HTTP.start(url.host, url.port) {|http|
+    # http.request(req)}
+    # @data = res.body
+    @data = "not real data"
+    # puts data
   end
 
   test "make request" do
