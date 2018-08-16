@@ -31,14 +31,38 @@ class DataRequest
     #     end_at: DateTime.parse(event_hash["enddt"]),
     #   )
     #end
-
+    url_string = 'http://calendar.libraryweb.org/ajax/calendar/list?c=-1&perpage=100&page=%d&date=0000-00-00'
     url = URI.parse('http://calendar.libraryweb.org/ajax/calendar/list?c=-1&perpage=100&page=1&date=0000-00-00')
     req = Net::HTTP::Get.new(url.to_s)
     res = Net::HTTP.start(url.host, url.port) {|http|
     http.request(req)}
-    # puts res.body
 
     JsonToEvents.call(res.body)
+    
+    result = JSON.parse(res.body)
+    total_events = result["total_results"]
+
+    puts total_events
+    iterations = total_events /  100
+
+    puts iterations
+    
+    puts iterations.round
+    i = 2
+
+    while i <= iterations  do
+      puts("Inside the loop i = %d", i )
+
+      url = URI.parse(url_string % [i])
+      req = Net::HTTP::Get.new(url.to_s)
+      res = Net::HTTP.start(url.host, url.port) {|http|
+      http.request(req)}
+
+      JsonToEvents.call(res.body)
+
+      i +=1
+    end
+
   end
 
   private
