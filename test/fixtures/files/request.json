@@ -1025,6 +1025,50 @@
             "org": "Vicki Rusinko",
             "orgurl": "https:\/\/calendar.libraryweb.org\/profile\/30645",
             "registration_enabled": false
+        },
+        {
+            "id": 4401143,
+            "title": "Star Wars 501st Legion Meet and Greet",
+            "description": "<p>Meet some Star Wars characters from the local 501st Legion professional costuming group. Their&nbsp;purpose is &quot;to bring fun and joy to the multitudes of Star Wars fans throughout the world, while also introducing the world of Star Wars to a whole new generation, with the release of the new Star Wars movies.&quot; These Star Wars fans&nbsp;provide an exciting atmosphere everywhere they go, so ve sure to join us for an hour of fun for all ages!&nbsp;<\/p>",
+            "more_info": "",
+            "shortdesc": "Meet some Star Wars characters from the local 501st Legion professional costuming group. Their purpose is &quot;to bring fun and joy to the multitudes of Star Wars fans throughout the world, while also introduc...",
+            "shortdesc_was_truncated": true,
+            "start": "6:00pm",
+            "end": "7:00pm",
+            "all_day": false,
+            "startdt": "2018-08-09 19:00:00",
+            "enddt": "2018-08-09 20:00:00",
+            "date": "Thursday, August 9, 2018",
+            "ymd": "20180809",
+            "day": "9",
+            "daypostfix": "th",
+            "dayfull": "Thursday",
+            "dayshort": "Thu",
+            "monthfull": "August",
+            "monthshort": "Aug",
+            "monthnum": "8",
+            "year": "2018",
+            "url": "https:\/\/calendar.libraryweb.org\/event\/4401143",
+            "color": "#B3C8EF",
+            "location": "Henrietta - Meeting Room",
+            "campus": "Henrietta Public Library",
+            "presenter": "",
+            "featured_image": "\/\/lcimages.s3.amazonaws.com\/data\/feat_img\/3666\/5053\/1532969532.png",
+            "audiences": [
+                {
+                    "id": 205,
+                    "name": "All Ages",
+                    "color": "#3AD1B3"
+                }
+            ],
+            "categories": "",
+            "categories_arr": [],
+            "calendar": "Henrietta Public Library",
+            "calendar_url": "https:\/\/calendar.libraryweb.org\/calendar?cid=5053",
+            "calendar_id": 5053,
+            "org": "Vicki Rusinko",
+            "orgurl": "https:\/\/calendar.libraryweb.org\/profile\/30645",
+            "registration_enabled": false
         }
     ]
 }
