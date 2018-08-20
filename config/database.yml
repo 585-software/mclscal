@@ -22,4 +22,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: mclscal_production
+  adapter: postgresql
+  encoding: unicode
