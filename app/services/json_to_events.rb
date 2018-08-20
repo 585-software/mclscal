@@ -19,16 +19,6 @@ class JsonToEvents
       campus = Campus.where(name: event_hash["campus"]).first_or_create!
 
       # Create an event
-      # Event.create!(
-      #   campus: campus,
-      #   title: event_hash["title"],
-      #   description: event_hash["description"],
-      #   url: event_hash["url"],
-      #   foreign_id: event_hash["id"],
-      #   start_at: DateTime.parse(event_hash["startdt"]),
-      #   end_at: DateTime.parse(event_hash["enddt"]),
-      # )
-
       Event.where(foreign_id: event_hash["id"]).first_or_create!(
         campus: campus,
         title: event_hash["title"],
@@ -44,9 +34,7 @@ class JsonToEvents
         start_at: DateTime.parse(event_hash["startdt"]),
         end_at: DateTime.parse(event_hash["enddt"]),
         )
-
     end
-    puts Event.last.start_at
 
   end
 
