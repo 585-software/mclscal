@@ -29,7 +29,7 @@ class DataRequest
     i = 2
 
     while i <= iterations  do
-      res = get_json_results
+      res = get_json_results(i)
 
       JsonToEvents.call(res.body)
 
@@ -40,8 +40,8 @@ class DataRequest
 
   private
 
-  def get_json_results
-    req = Net::HTTP::Get.new(API_URL.to_s)
+  def get_json_results(page=1)
+    req = Net::HTTP::Get.new(API_URL.to_s % page)
     Net::HTTP.start(API_URL.host, API_URL.port) do |http|
       http.request(req)
     end
