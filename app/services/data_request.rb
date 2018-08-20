@@ -24,7 +24,7 @@ class DataRequest
     result = JSON.parse(res.body)
     total_events = result["total_results"]
 
-    iterations = total_events /  100
+    iterations = (total_events / 100.0).ceil
 
     i = 2
 
