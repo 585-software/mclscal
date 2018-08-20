@@ -11,6 +11,12 @@ class JsonToEventsTest < ActiveSupport::TestCase
     end
   end
 
+  test "creates calendars" do
+    assert_difference "Calendar.count", 10 do
+      JsonToEvents.call(@raw_json)
+    end
+  end
+
   test "creates events" do
     assert_difference "Event.count", 20 do
       JsonToEvents.call(@raw_json)

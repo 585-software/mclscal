@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_08_235912) do
+ActiveRecord::Schema.define(version: 2018_08_20_232853) do
+
+  create_table "calendars", force: :cascade do |t|
+    t.string "name"
+    t.text "url"
+    t.integer "foreign_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "campus", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "campuses", force: :cascade do |t|
     t.string "name"
@@ -28,6 +42,8 @@ ActiveRecord::Schema.define(version: 2018_08_08_235912) do
     t.integer "campus_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "calendar_id"
+    t.index ["calendar_id"], name: "index_events_on_calendar_id"
     t.index ["campus_id"], name: "index_events_on_campus_id"
     t.index ["end_at"], name: "index_events_on_end_at"
     t.index ["foreign_id"], name: "index_events_on_foreign_id"
