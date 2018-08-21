@@ -17,7 +17,7 @@ class CalendarBuilder
   # Run logic here
   def call
   	ical_cal = Icalendar::Calendar.new
-	Event.includes(:calendar).where(calendars: { foreign_id: ids }, end_at: (Date.today..(1.years.from_now))).each do |event|
+	Event.includes(:calendar).where(calendars: { foreign_id: ids }, end_at: (Date.today..(3.months.from_now))).each do |event|
 		ical_event = Icalendar::Event.new
 		ical_event.summary = event.title
 		ical_event.description = event.description
