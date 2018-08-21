@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'my_calendar/events', format: :ics
   resources :calendars
   resources :campuses
   root to: "events#index"
