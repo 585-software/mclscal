@@ -1,0 +1,25 @@
+<form action="" class="cal-form" id="js--form" method=""  onSubmit="return false;">
+  <div class="title">
+    <h3>monroe county libraries</h3>
+    <p>Subcribe to the monroe county public libraries calendar to see what events are taking place at your local libraries</p>
+  </div>
+  <div class="opt-in">
+    <% @calendars.each do |calendar| %>
+      <label>
+        <input type="checkbox" value="<%= calendar.foreign_id %>" class="js--lib-values">
+        <%= calendar.name %>
+      </label>
+    <% end %>
+  </div>
+  <button class="btn_submit">Subcribe</button>
+</form>
+
+<div class="msg-container">
+  <div class="sublink-msg">
+    <em>Copy and paste the following link into your calendar application</em>
+    <p id="js--on-msg" class=""></p>
+  </div>
+  <div class="copy">
+    <i class="fas fa-clipboard"></i><span>Copy</span>
+  </div>
+</div>

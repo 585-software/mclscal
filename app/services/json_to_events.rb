@@ -17,7 +17,10 @@ class JsonToEvents
     parsed_json["results"].each do |event_hash|
       # Find a Campus that matches the name, or create one
       campus = Campus.where(name: event_hash["campus"]).first_or_create!
-      calendar = Calendar.where(foreign_id: event_hash["calendar_id"]).first_or_create!
+      calendar = Calendar.where(foreign_id: event_hash["calendar_id"]).first_or_create!(
+        name: event_hash["calendar"],
+        url: event_hash["calendar_url"]
+      )
 
       # Create an event
       Event.where(foreign_id: event_hash["id"]).first_or_create!(
