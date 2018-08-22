@@ -1,6 +1,8 @@
 require 'icalendar'
 
 class CalendarBuilder
+  include ActionView::Helpers::SanitizeHelper
+
   attr_reader :ids
 
   # Set arguments here
@@ -17,10 +19,10 @@ class CalendarBuilder
   # Run logic here
   def call
   	ical_cal = Icalendar::Calendar.new
-    Event.includes(:calendar).where(calendars: { foreign_id: ids }, end_at: (Date.today..(3.months.from_now))).order(start_at: :asc).each do |event|
+    Event.includes(:calendar, :campus).where(calendars: { foreign_id: ids }, end_at: (Date.today..(3.months.from_now))).order(start_at: :asc).each do |event|
       ical_event = Icalendar::Event.new
       ical_event.summary = event.title
-      ical_event.description = event.description
+      ical_event.description = strip_tags(event.description)
       ical_event.dtstart = event.start_at
       ical_event.dtend = event.end_at
       ical_event.url = event.url
