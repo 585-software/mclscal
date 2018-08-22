@@ -22,14 +22,14 @@ window.onload = function(){
     var error = document.getElementById('js--on-msg')
     var sublinkMsg = document.getElementsByClassName('sublink-msg')[0]
     var copyLink = document.getElementsByClassName('copy')[0]
-    var subscriptionLink = "http://mclscal.com/my_calendar/events.ics?calendar_ids="
+    var subscriptionLink = "http://mclscal.herokuapp.com/my_calendar/events.ics?calendar_ids="
     var idArr = []
 
 
 
     form.addEventListener('submit', function(form){
         idArr = [];
-        
+
         for(var i = 0; i < calID.length; i++ ) {
             if(calID[i].checked == true) {
                 idArr.push(calID[i].defaultValue);
