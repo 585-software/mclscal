@@ -111,14 +111,13 @@
 
 .cal-form {
   width: 60%;
-  height: 450px;
   background-color: #fff;
   box-shadow: 0 0 10px 5px rgba(192, 192, 192, 0.5);
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 30%);
-  border-radius: 4px
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  padding-bottom: 20px;
 }
 
 .opt-in {
@@ -134,7 +133,6 @@
 
 .title {
   width: 90%;
-  height: 170px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   background-color: rgb(18, 115, 194);
@@ -165,11 +163,10 @@ label {
   color: #fff;
   width: 170px;
   height: 35px;
-  position: absolute;
-  transform: translate(-50%, 10%);
+  position: relative;
+  margin: 10px auto;
+  display: block;
   background-color: rgb(18, 115, 194);;
-  left: 50%;
-  bottom: 5%;
   outline: none;
   font-size: 80%;
 }

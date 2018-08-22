@@ -1,6 +1,6 @@
 class MyCalendarController < ApplicationController
   def generate_url
-    @calendars = Calendar.all
+    @calendars = Calendar.all.order(name: :asc)
   end
 
   def events
