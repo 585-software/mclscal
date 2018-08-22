@@ -1,24 +1,18 @@
-# README
+# MCLScal
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Ruby on Rails application built for RocHacks 2018. It allows a user to
+subscribe to multiple Monroe County Library calendars at once using the iCal
+format.
 
-Things you may want to cover:
+## Contributors
 
-* Ruby version
+- <a href="https://github.com/GirigiriG">@GirigiriG</a>
+- <a href="https://github.com/Kpable">@Kpable</a>
+- <a href="https://github.com/jfine">@jfine</a>
+- <a href="https://github.com/kylemacey">@kylemacey</a>
 
-* System dependencies
+## Contributing
 
-* Configuration
+Feel free to open an issue if you want to report a bug or suggest an improvement.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Pulls Requests are welcome from anyone!
