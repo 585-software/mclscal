@@ -1,7 +1,7 @@
 <form action="" class="cal-form" id="js--form" method=""  onSubmit="return false;">
   <div class="title">
-    <h3>monroe county libraries</h3>
-    <p>Subcribe to the monroe county public libraries calendar to see what events are taking place at your local libraries</p>
+    <h3>Monroe County Libraries</h3>
+    <p>Subscribe to the Monroe County Public Libraries calendar to see what events are taking place at your local libraries</p>
   </div>
   <div class="opt-in">
     <% @calendars.each do |calendar| %>
@@ -22,4 +22,26 @@
   <div class="copy">
     <i class="fas fa-clipboard"></i><span>Copy</span>
   </div>
+</div>
+
+<div id="help">
+  <h3>Help</h3>
+  Subscribe using...
+  <ul>
+    <li>
+      <a href="https://support.apple.com/en-us/HT202361" target="_blank">
+        Apple iCloud Calendar Subscriptions
+      </a>
+    </li>
+    <li>
+      <a href="https://support.google.com/calendar/answer/37100?co=GENIE.Platform%3DDesktop&hl=en" target="_blank">
+        Google Calendar (Add using a link)
+      </a>
+    </li>
+    <li>
+      <a href="https://support.office.com/en-us/article/import-or-subscribe-to-a-calendar-in-outlook-com-cff1429c-5af6-41ec-a5b4-74f2c278e98c" target="_blank">
+        Outlook.com
+      </a>
+    </li>
+  </ul>
 </div>

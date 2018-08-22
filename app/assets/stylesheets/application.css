@@ -25,8 +25,7 @@
   width: 60%;
   padding: 10px 0;
   position: relative;
-  top: 50px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .sublink-msg {
@@ -37,7 +36,7 @@
   padding: 10px;
   background-color: rgb(30, 142, 235);
   box-shadow: 0 0 10px 5px rgba(192, 192, 192, 0.5);
-  position: absolute;
+  position: relative;
   overflow-y: scroll;
   display: none;
   border-radius: 5px;
@@ -109,7 +108,10 @@
   color:rgb(30, 142, 235);
 }
 
-.cal-form {
+.cal-form, #help {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   width: 60%;
   background-color: #fff;
   box-shadow: 0 0 10px 5px rgba(192, 192, 192, 0.5);
@@ -169,4 +171,16 @@ label {
   background-color: rgb(18, 115, 194);;
   outline: none;
   font-size: 80%;
+}
+
+#help {
+  padding: 20px;
+}
+
+#help ul {
+  margin-left: 30px;
+}
+
+#help, #help li a {
+  font-size: 0.8em;
 }
