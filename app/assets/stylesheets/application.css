@@ -206,3 +206,11 @@ label {
   color: #080808;
   background-color: transparent;
 }
+
+@media (max-width: 768px) {
+  .msg-container,
+  .cal-form,
+  #help {
+    width: 100%;
+  }
+}
