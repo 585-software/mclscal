@@ -26,7 +26,7 @@ window.onload = function(){
 
 
   form.addEventListener('submit', function(form){
-    var subscriptionLink = "http://mclscal.herokuapp.com/my_calendar/events.ics?calendar_ids="
+    var subscriptionLink = "https://mclscal.herokuapp.com/my_calendar/events.ics?calendar_ids="
     var idArr = []
 
 
