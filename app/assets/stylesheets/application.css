@@ -177,10 +177,32 @@ label {
   padding: 20px;
 }
 
+#help h3 {
+  line-height: 30px;
+}
+
 #help ul {
   margin-left: 30px;
 }
 
 #help, #help li a {
   font-size: 0.8em;
+}
+
+#github {
+  margin: 20px auto;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+#github p {
+  line-height: 24px;
+}
+
+#github a, #github a:visited, #github a:active, #github a:hover {
+  font-size: 0.8em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #080808;
+  background-color: transparent;
 }
